@@ -24,6 +24,10 @@ The main idea is to get instances by using `Injector.instantiateModelOrService(X
 The method `instantiateModelOrService` checks if there is already an instance of the given class. If yes, it returns it. If not, it creates a new one.
 A singleton can be added by `com.airhacks.afterburner.injection.Injector#setModelOrService(X.class, y)`, where X is the class and y the instance you want to inject.
 
+## Extending JabRef from another project
+
+See [Creating a companion plugin project](plugin-project.md) for the supported way to reuse JabRef logic in an external module.
+
 ## Cleanup and Formatters
 
 We try to build a cleanup mechanism based on formatters. The idea is that we can register these actions in arbitrary places, e.g., onSave, onImport, onExport, cleanup, etc. and apply them to different fields. The formatters themselves are independent of any logic and therefore easy to test.
